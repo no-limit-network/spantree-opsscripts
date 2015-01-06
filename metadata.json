@@ -1,0 +1,51 @@
+{
+  "name": "spantree-opsscripts",
+  "version": "0.1.0",
+  "author": "spantree",
+  "summary": "Installs scripts for use in the infrastructure",
+  "license": "Apache 2.0",
+  "source": "https://github.com/spantree/spantree-opsscripts",
+  "project_page": "https://github.com/spantree/spantree-opsscripts",
+  "issues_url": "https://github.com/spantree/spantree-opsscripts/issues",
+  "tags": [
+    "mongo",
+    "backup",
+    "restore"
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "12.04",
+        "14.04"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "name":"puppetlabs-stdlib","version_requirement":">= 3.3.0 <=4.4.0"
+    }
+  ]
+}
+
