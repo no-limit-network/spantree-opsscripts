@@ -4,7 +4,7 @@
   "author": "spantree",
   "summary": "Installs scripts for use in the infrastructure",
   "license": "Apache 2.0",
-  "source": "https://github.com/spantree/spantree-opsscripts",
+  "source": "https://github.com/Spantree/spantree-opsscripts.git",
   "project_page": "https://github.com/spantree/spantree-opsscripts",
   "issues_url": "https://github.com/spantree/spantree-opsscripts/issues",
   "tags": [
