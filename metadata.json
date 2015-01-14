@@ -1,6 +1,6 @@
 {
   "name": "spantree-opsscripts",
-  "version": "0.2.1",
+  "version": "0.2.0",
   "author": "spantree",
   "summary": "Installs scripts for use in the infrastructure",
   "license": "Apache 2.0",
@@ -10,7 +10,8 @@
   "tags": [
     "mongo",
     "backup",
-    "restore"
+    "restore",
+    "elasticsearch"
   ],
   "operatingsystem_support": [
     {
