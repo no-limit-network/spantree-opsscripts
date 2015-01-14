@@ -36,4 +36,19 @@ class opsscripts (
     owner  => 'root',
     mode   => '0755',
   }
+
+  file { "${path}/backup-es.sh":
+    ensure => present,
+    source => 'puppet:///modules/opsscripts/backup-es.sh',
+    owner  => 'root',
+    mode   => '0755',
+  }
+
+  file { "${path}/restore-es.sh":
+    ensure => present,
+    source => 'puppet:///modules/opsscripts/restore-es.sh',
+    owner  => 'root',
+    mode   => '0755',
+  }
+
 }

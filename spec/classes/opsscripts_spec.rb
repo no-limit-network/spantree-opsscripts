@@ -9,6 +9,8 @@ describe 'opsscripts', :type => :class do
       it { should contain_class('opsscripts::params') }
       it { should contain_file('/usr/local/bin/backup-mongo.sh') }
       it { should contain_file('/usr/local/bin/restore-mongo.sh') }
+      it { should contain_file('/usr/local/bin/backup-es.sh') }
+      it { should contain_file('/usr/local/bin/restore-es.sh') }
     end
     context 'with paramameters path = "/opt/bin"' do
       let(:params) {{ :path => '/opt/bin' }}
@@ -16,6 +18,8 @@ describe 'opsscripts', :type => :class do
       it { should contain_class('opsscripts::params') }
       it { should contain_file('/opt/bin/backup-mongo.sh') }
       it { should contain_file('/opt/bin/restore-mongo.sh') }
+      it { should contain_file('/opt/bin/backup-es.sh') }
+      it { should contain_file('/opt/bin/restore-es.sh') }
     end
   end
 
