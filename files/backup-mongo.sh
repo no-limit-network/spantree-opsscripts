@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-TMP_DIR=/tmp/backup
+TMP_DIR=/var/db/mongobackups
 
 prereqs () {
 cat << EOF
