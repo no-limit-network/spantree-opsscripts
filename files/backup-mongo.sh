@@ -62,6 +62,10 @@ do
       S3CMD=$(command -v s3cmd)
       shift
       ;;
+    -i|--ignore)
+      IGNORE=1
+      shift
+      ;;
   esac
 done
 
@@ -72,16 +76,23 @@ if [ -z "${LABEL}" ]; then
 fi
 
 if [[ -z ${TAR} ]] || [[ -z ${MONGO} ]] || [[ -z ${MDUMP} ]]; then
+  if [ "$IGNORE" != "" ]; then
+  	# just exit
+  	exit 1
+  fi  
   prereqs
-  echo "One of the following tools is missing: tar, s3cmd, mongo, mongodump"
+  echo "One of the following tools is missing: tar, mongo, mongodump"
   exit 1
 fi
 
 # if bucket not specified we do not test for s3cmd
 if [ ! -z "${S3BUCKET}" ]; then 
   if [ -z ${S3CMD} ]; then
+  	if [ "$IGNORE" != "" ]; then
+  		exit 1
+  	fi
     prereqs_s3
-    echo "One of the following tools is missing: tar, s3cmd, mongo, mongodump"
+    echo "One of the following tools is missing: s3cmd"
     exit 1
   fi
   # check that s3cmd is configured
